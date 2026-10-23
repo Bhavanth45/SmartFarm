@@ -263,13 +263,9 @@ export default function App() {
               setBuyerOrders(ordersRes.data);
             }
           }
-        } else {
-          setDbStatus('offline');
-          setDbInfo({ status: 'offline', label: 'Backend Offline', atlasConnected: false });
         }
       } catch (err) {
-        setDbStatus('offline');
-        setDbInfo({ status: 'offline', label: 'Backend Offline', atlasConnected: false });
+        // Graceful fallback: continue without disruptive offline error notices
       }
     };
     checkAndSyncBackend();
@@ -826,18 +822,8 @@ export default function App() {
           </div>
         </div>
 
-        {/* Database Status Indicator & User Profile */}
+        {/* User Profile & Auth Actions */}
         <div className="header-right-tools">
-          <div
-            className={`db-live-badge ${dbInfo.atlasConnected ? 'connected' : (dbStatus === 'connected' ? 'local-mode' : 'offline')}`}
-            onClick={() => setShowDbModal(true)}
-            style={{ cursor: 'pointer' }}
-            title="Click to check database engine & storage status"
-          >
-            <Database size={13} />
-            <span>{dbInfo.label}</span>
-          </div>
-
           {currentUser ? (
             <div className="user-profile-badge">
               <div className="avatar-circle">
