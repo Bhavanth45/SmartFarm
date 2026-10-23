@@ -1,4 +1,18 @@
-const API_BASE = 'http://localhost:5000/api';
+const resolveApiBase = () => {
+  const envUrl = import.meta.env?.VITE_API_URL;
+  if (envUrl && typeof envUrl === 'string') {
+    let clean = envUrl.trim().replace(/^\[(.*?)\]\(.*?\)$/, '$1').replace(/['"]/g, '');
+    clean = clean.replace(/\/+$/, '');
+    if (!clean.endsWith('/api')) clean += '/api';
+    return clean;
+  }
+  if (typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')) {
+    return 'http://localhost:5000/api';
+  }
+  return 'https://smartfarm-backend-tdo9.onrender.com/api';
+};
+
+export const API_BASE = resolveApiBase();
 
 // Helper to get JWT token from localStorage
 const getHeaders = () => {
@@ -10,6 +24,18 @@ const getHeaders = () => {
 };
 
 export const api = {
+  // System Health
+  getHealth: async () => {
+    try {
+      const res = await fetch(`${API_BASE}/health`);
+      if (!res.ok) return { success: false, offline: true, status: res.status };
+      return await res.json();
+    } catch (err) {
+      console.warn('Backend health check error:', err);
+      return { success: false, offline: true, error: err.message };
+    }
+  },
+
   // Auth
   login: async (identifier, password) => {
     try {

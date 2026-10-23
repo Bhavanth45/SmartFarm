@@ -233,16 +233,16 @@ export default function App() {
   useEffect(() => {
     const checkAndSyncBackend = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/health');
-        if (res.ok) {
-          const healthData = await res.json();
+        const healthData = await api.getHealth();
+        if (healthData && (healthData.status === 'HEALTHY' || healthData.success !== false)) {
           const dbMeta = healthData.database || {};
+          const isAtlas = !!dbMeta.atlasConnected;
           setDbStatus('connected');
           setDbInfo({
             status: 'connected',
-            mode: dbMeta.mode || 'LOCAL_PERSISTENT_STORE',
-            label: dbMeta.atlasConnected ? 'MongoDB Atlas Live' : 'Local DB (Disk Saved)',
-            atlasConnected: !!dbMeta.atlasConnected,
+            mode: dbMeta.mode || (isAtlas ? 'MONGODB_ATLAS' : 'LOCAL_PERSISTENT_STORE'),
+            label: isAtlas ? 'MongoDB Atlas Live' : (dbMeta.statusLabel || 'MongoDB Connected'),
+            atlasConnected: isAtlas,
             counts: dbMeta.counts,
             wifiNotice: dbMeta.wifiNotice
           });
@@ -1938,24 +1938,32 @@ export default function App() {
                 <button
                   type="button"
                   className="btn-submit"
-                  onClick={() => {
+                  onClick={async () => {
                     setShowDbModal(false);
                     showToast('Checking database connection...');
-                    fetch('http://localhost:5000/api/health')
-                      .then(r => r.json())
-                      .then(data => {
+                    try {
+                      const data = await api.getHealth();
+                      if (data && (data.status === 'HEALTHY' || data.success !== false)) {
                         const dbMeta = data.database || {};
+                        const isAtlas = !!dbMeta.atlasConnected;
+                        setDbStatus('connected');
                         setDbInfo({
                           status: 'connected',
-                          mode: dbMeta.mode,
-                          label: dbMeta.atlasConnected ? 'MongoDB Atlas Live' : 'Local DB (Disk Saved)',
-                          atlasConnected: !!dbMeta.atlasConnected,
+                          mode: dbMeta.mode || (isAtlas ? 'MONGODB_ATLAS' : 'LOCAL_PERSISTENT_STORE'),
+                          label: isAtlas ? 'MongoDB Atlas Live' : (dbMeta.statusLabel || 'MongoDB Connected'),
+                          atlasConnected: isAtlas,
                           counts: dbMeta.counts,
                           wifiNotice: dbMeta.wifiNotice
                         });
-                        showToast(dbMeta.atlasConnected ? '✅ Connected to MongoDB Atlas Cloud!' : 'ℹ️ Running on Local Persistent Engine');
-                      })
-                      .catch(() => showToast('Backend server not responding'));
+                        showToast(isAtlas ? '✅ Connected to MongoDB Atlas Cloud!' : 'ℹ️ Running on Local Persistent Engine');
+                      } else {
+                        setDbStatus('offline');
+                        setDbInfo({ status: 'offline', label: 'Backend Offline', atlasConnected: false });
+                        showToast('⚠️ Backend server offline');
+                      }
+                    } catch (e) {
+                      showToast('Backend server not responding');
+                    }
                   }}
                 >
                   Refresh Connection State
