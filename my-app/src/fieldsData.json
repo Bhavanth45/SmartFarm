@@ -1,0 +1,59 @@
+{
+  "defaultUser": {
+    "name": "Ramesh Kumar",
+    "phone": "9876543210",
+    "email": "ramesh@kisan.in",
+    "role": "Organic Farm Owner"
+  },
+  "fields": [
+    {
+      "id": "field-1",
+      "name": "Field 1: Peppers",
+      "crop": "Poblano Pepper (Capsicum)",
+      "healthScore": 94,
+      "healthStatus": "Excellent",
+      "soilMoisture": 68,
+      "moistureStatus": "Healthy & Moist",
+      "temp": 24,
+      "weatherText": "Sunny & Warm",
+      "rainChance": "10%",
+      "wind": "9 km/h (Gentle breeze)",
+      "marketPrice": "₹65 / kg",
+      "marketTrend": "+8% this week",
+      "zones": [
+        { "name": "North Plot", "status": "Healthy", "color": "#22c55e" },
+        { "name": "Center Plot", "status": "Needs Water", "color": "#eab308" },
+        { "name": "South Plot", "status": "Healthy", "color": "#22c55e" }
+      ],
+      "tasks": [
+        { "id": 1, "text": "Water the center plot before 2 PM", "time": "Today", "priority": "High", "done": false },
+        { "id": 2, "text": "Check pepper leaves for morning bugs", "time": "Tomorrow", "priority": "Normal", "done": true },
+        { "id": 3, "text": "Prepare harvest crates for next week", "time": "In 3 days", "priority": "Normal", "done": false }
+      ]
+    },
+    {
+      "id": "field-2",
+      "name": "Field 2: Wheat",
+      "crop": "Winter Wheat (Gehun)",
+      "healthScore": 82,
+      "healthStatus": "Good",
+      "soilMoisture": 45,
+      "moistureStatus": "Slightly Dry",
+      "temp": 21,
+      "weatherText": "Breezy & Mild",
+      "rainChance": "25%",
+      "wind": "18 km/h (Moderate gusts)",
+      "marketPrice": "₹28 / kg",
+      "marketTrend": "+3% this week",
+      "zones": [
+        { "name": "Upper Ridge", "status": "Slightly Dry", "color": "#eab308" },
+        { "name": "Main Meadow", "status": "Healthy", "color": "#22c55e" },
+        { "name": "Lowland", "status": "Healthy", "color": "#22c55e" }
+      ],
+      "tasks": [
+        { "id": 4, "text": "Postpone drone spray due to windy weather", "time": "Today", "priority": "High", "done": false },
+        { "id": 5, "text": "Inspect soil moisture near the hill ridge", "time": "Today", "priority": "Normal", "done": false }
+      ]
+    }
+  ]
+}

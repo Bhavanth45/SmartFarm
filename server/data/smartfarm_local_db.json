@@ -1,0 +1,424 @@
+{
+  "users": [
+    {
+      "_id": "660f11111111111111111111",
+      "name": "Ramesh Kumar",
+      "phone": "9876543210",
+      "email": "ramesh.farmer@smartfarm.in",
+      "password": "$2b$10$tnGrz2Qf0EqF1NJX.NvApe/nzyG32i6ahJ0Bv3Bzwac7wzm.nlBOa",
+      "role": "Farmer",
+      "farmLocation": "Nashik, Maharashtra",
+      "createdAt": "2026-10-12T09:15:22.845Z"
+    },
+    {
+      "_id": "660f22222222222222222222",
+      "name": "Priya Sharma (Mandi Procurement)",
+      "phone": "9988776655",
+      "email": "priya.buyer@apmcagri.com",
+      "password": "$2b$10$tnGrz2Qf0EqF1NJX.NvApe/nzyG32i6ahJ0Bv3Bzwac7wzm.nlBOa",
+      "role": "Buyer",
+      "farmLocation": "Vashi APMC Mandi, Navi Mumbai",
+      "createdAt": "2026-10-12T09:15:22.846Z"
+    },
+    {
+      "_id": "6acca5dd9a90e5e4c8cf18cc",
+      "name": "Sunil Gavaskar",
+      "phone": "9123456780",
+      "password": "$2b$10$Ykqbbzi7hQTkspfWtJRGTewqrO2d5/lS5tD6H9tSSr6i5UAILlz02",
+      "role": "Farmer",
+      "farmLocation": "India",
+      "createdAt": "2026-10-12T09:18:21.539Z"
+    },
+    {
+      "_id": "6acca67493a63623f4820e9d",
+      "name": "ash",
+      "phone": "ash@gmail.com",
+      "email": "ash@gmail.com",
+      "password": "$2b$10$RvH7TTYq779xeWs4tyP.Ge44B4NlhG13GLUXMnJ0RROerOeh8YUHq",
+      "role": "Farmer",
+      "farmLocation": "India",
+      "createdAt": "2026-10-12T09:20:52.112Z"
+    }
+  ],
+  "fields": [
+    {
+      "_id": "6ad624a0081e19a3b61e4fee",
+      "userId": "6acca6d54597c170172d9aa9",
+      "name": "pepper",
+      "crop": "Poblano Pepper",
+      "area": "5.0 Acres",
+      "healthScore": 92,
+      "healthStatus": "Excellent",
+      "soilMoisture": 65,
+      "moistureStatus": "Healthy & Moist",
+      "pesticideShield": false,
+      "lastPesticideSpray": "Not Applied",
+      "temp": 24.5,
+      "weatherText": "Partly Sunny",
+      "rainChance": "10%",
+      "wind": "8 km/h",
+      "marketPrice": "₹60 / kg",
+      "marketTrend": "+5% this week",
+      "zones": [
+        {
+          "id": "z1",
+          "name": "North Plot",
+          "moisture": 65,
+          "status": "Healthy",
+          "color": "#22c55e",
+          "pestProtected": false
+        },
+        {
+          "id": "z2",
+          "name": "Center Plot",
+          "moisture": 50,
+          "status": "Needs Water",
+          "color": "#eab308",
+          "pestProtected": false
+        },
+        {
+          "id": "z3",
+          "name": "South Plot",
+          "moisture": 75,
+          "status": "Healthy",
+          "color": "#22c55e",
+          "pestProtected": false
+        }
+      ],
+      "createdAt": "2026-10-19T14:09:36.186Z"
+    },
+    {
+      "_id": "6ad58a21eeed5804b155465f",
+      "userId": "6acca6d54597c170172d9aa9",
+      "name": "tomato field",
+      "crop": "Tomato",
+      "area": "5.0 Acres",
+      "healthScore": 92,
+      "healthStatus": "Excellent",
+      "soilMoisture": 72,
+      "moistureStatus": "Healthy & Moist",
+      "pesticideShield": false,
+      "lastPesticideSpray": "Not Applied",
+      "temp": 24.5,
+      "weatherText": "Partly Sunny",
+      "rainChance": "10%",
+      "wind": "8 km/h",
+      "marketPrice": "₹60 / kg",
+      "marketTrend": "+5% this week",
+      "zones": [
+        {
+          "id": "z1",
+          "name": "North Plot",
+          "moisture": 72,
+          "status": "Healthy",
+          "color": "#22c55e",
+          "pestProtected": false
+        },
+        {
+          "id": "z2",
+          "name": "Center Plot",
+          "moisture": 57,
+          "status": "Needs Water",
+          "color": "#eab308",
+          "pestProtected": false
+        },
+        {
+          "id": "z3",
+          "name": "South Plot",
+          "moisture": 82,
+          "status": "Healthy",
+          "color": "#22c55e",
+          "pestProtected": false
+        }
+      ],
+      "createdAt": "2026-10-19T03:10:25.018Z"
+    },
+    {
+      "_id": "6acca6742d7ef5608d0d4d95",
+      "userId": "6acca67493a63623f4820e9d",
+      "name": "Plot 1: Main Farm",
+      "crop": "Tomato (Tamatar)",
+      "area": "5.0 Acres",
+      "healthScore": 92,
+      "healthStatus": "Excellent",
+      "soilMoisture": 65,
+      "moistureStatus": "Healthy & Moist",
+      "pesticideShield": false,
+      "lastPesticideSpray": "Not Applied",
+      "temp": 24.5,
+      "weatherText": "Partly Sunny",
+      "rainChance": "10%",
+      "wind": "8 km/h",
+      "marketPrice": "₹40 / kg",
+      "marketTrend": "+5% this week",
+      "zones": [
+        {
+          "id": "z1",
+          "name": "North Plot",
+          "moisture": 65,
+          "status": "Healthy",
+          "color": "#22c55e",
+          "pestProtected": false
+        },
+        {
+          "id": "z2",
+          "name": "Center Plot",
+          "moisture": 50,
+          "status": "Needs Water",
+          "color": "#eab308",
+          "pestProtected": false
+        },
+        {
+          "id": "z3",
+          "name": "South Plot",
+          "moisture": 75,
+          "status": "Healthy",
+          "color": "#22c55e",
+          "pestProtected": false
+        }
+      ],
+      "createdAt": "2026-10-12T09:20:52.137Z"
+    },
+    {
+      "_id": "6acca56ff28b1982b1292a90",
+      "userId": "660f11111111111111111111",
+      "name": "Plot 3: Alphonso Mangoes",
+      "crop": "Alphonso Mango",
+      "area": "8.0 Acres",
+      "healthScore": 98,
+      "healthStatus": "Excellent",
+      "soilMoisture": 87,
+      "moistureStatus": "Freshly Watered",
+      "pesticideShield": false,
+      "lastPesticideSpray": "Not Applied",
+      "temp": 24.5,
+      "weatherText": "Partly Sunny",
+      "rainChance": "10%",
+      "wind": "8 km/h",
+      "marketPrice": "?120 / kg",
+      "marketTrend": "+5% this week",
+      "zones": [
+        {
+          "id": "z1",
+          "name": "North Plot",
+          "moisture": 92,
+          "status": "Healthy",
+          "color": "#22c55e",
+          "pestProtected": false
+        },
+        {
+          "id": "z2",
+          "name": "Center Plot",
+          "moisture": 77,
+          "status": "Healthy",
+          "color": "#22c55e",
+          "pestProtected": false
+        },
+        {
+          "id": "z3",
+          "name": "South Plot",
+          "moisture": 95,
+          "status": "Healthy",
+          "color": "#22c55e",
+          "pestProtected": false
+        }
+      ],
+      "createdAt": "2026-10-12T09:16:31.753Z",
+      "lastWateredAt": "2026-10-12T09:16:38.536Z"
+    },
+    {
+      "_id": "660f33333333333333333331",
+      "userId": "660f11111111111111111111",
+      "name": "Plot 1: Poblano Peppers (Greenhouse A)",
+      "crop": "Poblano Pepper",
+      "area": "4.5 Acres",
+      "healthScore": 99,
+      "healthStatus": "Excellent",
+      "soilMoisture": 93,
+      "moistureStatus": "Freshly Watered",
+      "pesticideShield": true,
+      "lastPesticideSpray": "2 days ago (Neem Bio-Shield)",
+      "temp": 24.2,
+      "weatherText": "Partly Sunny",
+      "rainChance": "10%",
+      "wind": "8 km/h",
+      "marketPrice": "₹65 / kg",
+      "marketTrend": "+8% this week",
+      "zones": [
+        {
+          "id": "z1",
+          "name": "North Plot",
+          "moisture": 95,
+          "status": "Healthy",
+          "color": "#22c55e",
+          "pestProtected": true
+        },
+        {
+          "id": "z2",
+          "name": "Center Plot",
+          "moisture": 62,
+          "status": "Healthy",
+          "color": "#22c55e",
+          "pestProtected": false
+        },
+        {
+          "id": "z3",
+          "name": "South Plot",
+          "moisture": 94,
+          "status": "Healthy",
+          "color": "#22c55e",
+          "pestProtected": true
+        }
+      ],
+      "createdAt": "2026-10-12T09:15:22.847Z",
+      "lastWateredAt": "2026-10-15T03:18:38.038Z"
+    },
+    {
+      "_id": "660f33333333333333333332",
+      "userId": "660f11111111111111111111",
+      "name": "Plot 2: Sharbati Winter Wheat",
+      "crop": "Winter Wheat (Gehun)",
+      "area": "12.0 Acres",
+      "healthScore": 88,
+      "healthStatus": "Good",
+      "soilMoisture": 65,
+      "moistureStatus": "Healthy & Moist",
+      "pesticideShield": false,
+      "lastPesticideSpray": "Not Applied",
+      "temp": 22.8,
+      "weatherText": "Clear Sky",
+      "rainChance": "5%",
+      "wind": "11 km/h",
+      "marketPrice": "₹28 / kg",
+      "marketTrend": "+4% this week",
+      "zones": [
+        {
+          "id": "z1",
+          "name": "Canal Zone",
+          "moisture": 68,
+          "status": "Healthy",
+          "color": "#22c55e",
+          "pestProtected": false
+        },
+        {
+          "id": "z2",
+          "name": "Middle Terrace",
+          "moisture": 62,
+          "status": "Healthy",
+          "color": "#22c55e",
+          "pestProtected": false
+        },
+        {
+          "id": "z3",
+          "name": "Ridge Plot",
+          "moisture": 54,
+          "status": "Needs Water",
+          "color": "#eab308",
+          "pestProtected": false
+        }
+      ],
+      "createdAt": "2026-10-12T09:15:22.847Z"
+    }
+  ],
+  "tasks": [
+    {
+      "_id": "6acca57edbb8ed1b6c5b9216",
+      "userId": "660f11111111111111111111",
+      "fieldId": "6acca56ff28b1982b1292a90",
+      "text": "Check drip emitters for mango nursery",
+      "time": "Today, 5:00 PM",
+      "priority": "High",
+      "done": true,
+      "createdAt": "2026-10-12T09:16:46.220Z",
+      "completedAt": "2026-10-12T09:16:54.699Z"
+    },
+    {
+      "_id": "660f44444444444444444441",
+      "userId": "660f11111111111111111111",
+      "fieldId": "660f33333333333333333331",
+      "text": "Irrigate Center Plot with 15-minute drip pulse",
+      "time": "Today, 4:00 PM",
+      "priority": "High",
+      "done": false,
+      "createdAt": "2026-10-12T09:15:22.847Z"
+    },
+    {
+      "_id": "660f44444444444444444442",
+      "userId": "660f11111111111111111111",
+      "fieldId": "660f33333333333333333331",
+      "text": "Inspect sticky yellow traps for whiteflies",
+      "time": "Tomorrow Morning",
+      "priority": "Normal",
+      "done": false,
+      "createdAt": "2026-10-12T09:15:22.847Z"
+    },
+    {
+      "_id": "660f44444444444444444443",
+      "userId": "660f11111111111111111111",
+      "fieldId": "660f33333333333333333332",
+      "text": "Soil nitrogen test before flowering stage",
+      "time": "Friday",
+      "priority": "Normal",
+      "done": true,
+      "completedAt": "2026-10-12T09:15:22.847Z",
+      "createdAt": "2026-10-12T09:15:22.847Z"
+    }
+  ],
+  "telemetrylogs": [
+    {
+      "_id": "660f55555555555555555551",
+      "fieldId": "660f33333333333333333331",
+      "moistureBefore": 38,
+      "moistureAfter": 78,
+      "action": "DRIP_IRRIGATION_PULSE",
+      "temp": 24.2,
+      "timestamp": "2026-10-12T09:15:22.847Z"
+    },
+    {
+      "_id": "6acca576a1314ef2548bf73e",
+      "fieldId": "6acca56ff28b1982b1292a90",
+      "moistureBefore": 72,
+      "moistureAfter": 87,
+      "action": "DRIP_PULSE_IRRIGATION",
+      "timestamp": "2026-10-12T09:16:38.536Z"
+    },
+    {
+      "_id": "6ad0460ea944bd6bd5325a43",
+      "fieldId": "660f33333333333333333331",
+      "moistureBefore": 78,
+      "moistureAfter": 93,
+      "action": "DRIP_PULSE_IRRIGATION",
+      "timestamp": "2026-10-15T03:18:38.038Z"
+    }
+  ],
+  "orders": [
+    {
+      "_id": "6acca59574a9747a0dcd2423",
+      "orderId": "ORD-370143",
+      "buyerId": "660f22222222222222222222",
+      "farmerPhone": "9812345678",
+      "ratePerKg": 92,
+      "orderDate": "12/10/2026",
+      "totalAmount": 460000,
+      "quantityKg": 5000,
+      "crop": "Basmati Rice (1121 Extra Long)",
+      "location": "Ludhiana, Punjab",
+      "status": "Confirmed (Payment Escrow)",
+      "farmerName": "Gurpreet Singh",
+      "createdAt": "2026-10-12T09:17:09.527Z"
+    },
+    {
+      "orderId": "ORD-982134",
+      "buyerId": "660f22222222222222222222",
+      "crop": "Poblano Pepper (Capsicum)",
+      "farmerName": "Ramesh Kumar",
+      "farmerPhone": "9876543210",
+      "location": "Nashik, Maharashtra",
+      "quantityKg": 1000,
+      "ratePerKg": 65,
+      "totalAmount": 65000,
+      "status": "Confirmed (Payment Escrow)",
+      "orderDate": "12/10/2026"
+    }
+  ]
+}
